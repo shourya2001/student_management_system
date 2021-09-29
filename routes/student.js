@@ -10,7 +10,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: true });
 const jsonParser = bodyParser.json()
 
 
-
 // below function takes body and call back function as parameter
 router.get("/",verifyToken, urlencodedParser, getAllStudents);
 router.post("/",verifyToken,jsonParser,urlencodedParser, createStudent);
